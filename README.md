@@ -70,6 +70,32 @@ calculator-poligloty/
 - C — https://www.open-std.org/jtc1/sc22/wg14/
 - TypeScript — https://www.typescriptlang.org/
 
+## Mockup visual da calculadora
+
+```mermaid
+flowchart TB
+    A[Calculadora] --> B[Display]
+    B --> C[7]
+    B --> D[8]
+    B --> E[9]
+    B --> F[/]
+    G[4] --> B
+    H[5] --> B
+    I[6] --> B
+    J[*] --> B
+    K[1] --> B
+    L[2] --> B
+    M[3] --> B
+    N[-] --> B
+    O[0] --> B
+    P[.] --> B
+    Q[=] --> B
+    R[+ ] --> B
+    B --> S[Resultado]
+```
+
+Esse mockup representa a estrutura visual comum das versões gráficas: display central, teclas numéricas e operadores, e botão de resultado.
+
 ## Como executar as versões de terminal
 
 ### Go
