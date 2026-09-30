@@ -1,38 +1,32 @@
-def show_menu():
+def main():
     print("=== Calculadora em Python ===")
     print("1. Adição (+)")
     print("2. Subtração (-)")
     print("3. Multiplicação (*)")
     print("4. Divisão (/)")
 
+    try:
+        escolha = int(input("Escolha a operação (1-4): "))
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+    except ValueError:
+        print("Erro: Por favor, digite apenas números!")
+        return
 
-def read_number(label):
-    while True:
-        try:
-            return float(input(label))
-        except ValueError:
-            print("Entrada inválida. Digite um número válido.")
+    match escolha:
+        case 1:
+            print(f"Resultado: {num1} + {num2} = {num1 + num2}")
+        case 2:
+            print(f"Resultado: {num1} - {num2} = {num1 - num2}")
+        case 3:
+            print(f"Resultado: {num1} * {num2} = {num1 * num2}")
+        case 4:
+            if num2 == 0:
+                print("Erro: Divisão por zero não é permitida!")
+            else:
+                print(f"Resultado: {num1} / {num2} = {num1 / num2}")
+        case _:
+            print("Opção inválida!")
 
-
-show_menu()
-choice = int(input("Escolha a operação (1-4): "))
-num1 = read_number("Digite o primeiro número: ")
-num2 = read_number("Digite o segundo número: ")
-
-if choice == 1:
-    result = num1 + num2
-    print(f"Resultado: {num1} + {num2} = {result}")
-elif choice == 2:
-    result = num1 - num2
-    print(f"Resultado: {num1} - {num2} = {result}")
-elif choice == 3:
-    result = num1 * num2
-    print(f"Resultado: {num1} * {num2} = {result}")
-elif choice == 4:
-    if num2 == 0:
-        print("Erro: Divisão por zero não é permitida!")
-    else:
-        result = num1 / num2
-        print(f"Resultado: {num1} / {num2} = {result}")
-else:
-    print("Opção inválida!")
+if __name__ == "__main__":
+    main()

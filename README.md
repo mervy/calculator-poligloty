@@ -8,7 +8,8 @@ A estrutura foi organizada para seguir o conteúdo do rascunho, com as linguagen
 
 ```text
 calculator-poligloty/
-├── docs/
+├── .docs/
+│   └── rascunho.md
 ├── go/
 │   ├── terminal/
 │   └── graphic/
@@ -40,8 +41,7 @@ calculator-poligloty/
 │   ├── terminal/
 │   └── graphic/
 ├── README.md
-├── rascunho.md
-└── docs/
+└── .gitignore
 ```
 
 ## Linguagens incluídas
