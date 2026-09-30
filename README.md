@@ -1,8 +1,8 @@
 # Calculator Poligloty
 
-Projeto para comparar implementações de uma calculadora simples em diferentes linguagens de programação, separando versões que rodam no terminal e versões que podem evoluir para interface gráfica.
+Projeto para comparar implementações de uma calculadora simples em diferentes linguagens, separando versões de terminal e versões gráficas.
 
-A ideia principal é demonstrar como a mesma funcionalidade pode ser escrita em diversas linguagens, mantendo a lógica de operação e o comportamento do usuário em cada ambiente.
+A estrutura foi organizada para seguir o conteúdo do rascunho, com as linguagens que aparecem nele. O TypeScript foi mantido como complemento manual, porque não estava no material original.
 
 ## Estrutura do projeto
 
@@ -18,22 +18,25 @@ calculator-poligloty/
 ├── rust/
 │   ├── terminal/
 │   └── graphic/
+├── javascript/
+│   ├── terminal/
+│   └── graphic/
+├── php/
+│   ├── terminal/
+│   └── graphic/
 ├── python/
 │   ├── terminal/
 │   └── graphic/
 ├── java/
 │   ├── terminal/
 │   └── graphic/
-├── javascript/
-│   ├── terminal/
-│   └── graphic/
-├── typescript/
-│   ├── terminal/
-│   └── graphic/
 ├── csharp/
 │   ├── terminal/
 │   └── graphic/
-├── kotlin/
+├── c/
+│   ├── terminal/
+│   └── graphic/
+├── typescript/
 │   ├── terminal/
 │   └── graphic/
 ├── README.md
@@ -46,12 +49,26 @@ calculator-poligloty/
 - Go
 - C++
 - Rust
+- JavaScript
+- PHP
 - Python
 - Java
-- JavaScript
-- TypeScript
 - C#
-- Kotlin
+- C
+- TypeScript (manual)
+
+## Sites oficiais
+
+- Go — https://go.dev/
+- C++ — https://isocpp.org/
+- Rust — https://www.rust-lang.org/
+- JavaScript — https://tc39.es/
+- PHP — https://www.php.net/
+- Python — https://www.python.org/
+- Java — https://www.java.com/
+- C# — https://learn.microsoft.com/dotnet/csharp/
+- C — https://www.open-std.org/jtc1/sc22/wg14/
+- TypeScript — https://www.typescriptlang.org/
 
 ## Como executar as versões de terminal
 
@@ -78,6 +95,20 @@ rustc main.rs -o calculadora
 ./calculadora
 ```
 
+### JavaScript
+
+```bash
+cd javascript/terminal
+node main.js
+```
+
+### PHP
+
+```bash
+cd php/terminal
+php calculadora.php
+```
+
 ### Python
 
 ```bash
@@ -89,15 +120,23 @@ python3 main.py
 
 ```bash
 cd java/terminal
-javac Main.java
-java Main
+javac Calculadora.java
+java Calculadora
 ```
 
-### JavaScript
+### C#
 
 ```bash
-cd javascript/terminal
-node main.js
+cd csharp/terminal
+dotnet run
+```
+
+### C
+
+```bash
+cd c/terminal
+gcc main.c -o calculadora
+./calculadora
 ```
 
 ### TypeScript
@@ -108,27 +147,12 @@ tsc main.ts
 node main.js
 ```
 
-### C#
-
-```bash
-cd csharp/terminal
-dotnet run
-```
-
-### Kotlin
-
-```bash
-cd kotlin/terminal
-kotlinc Main.kt -include-runtime -d calculadora.jar
-java -jar calculadora.jar
-```
-
 ## Descrição da divisão
 
-- `terminal`: versões de linha de comando, com menu e leitura de números pelo console.
-- `graphic`: estrutura preparada para versões futuras com interface visual.
-- `docs`: documentação e comparativos do projeto.
+- `terminal`: versões em linha de comando.
+- `graphic`: versões com interface visual.
+- `docs`: documentação do projeto.
 
 ## Objetivo
 
-O projeto serve como base para estudo, comparação de sintaxe e organização de código entre diversas linguagens, além de permitir evoluir para versões com interface gráfica no futuro.
+O projeto tem como objetivo comparar a mesma lógica de calculadora em diferentes linguagens e modelos de interface, mantendo a organização por linguagem e tipo de execução.
